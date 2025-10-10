@@ -1,0 +1,231 @@
+
+body {
+    padding-top: 90px; /* Adiciona padding ao topo do body (ajustado para a altura da sua navbar de 80px + um pouco de margem) */
+}
+
+/* HEADER */
+/* A tag <header> engloba a navbar, mas a navbar do Bootstrap é a que define o comportamento fixo e o fundo. */
+header {
+    /* Removido: background: #f3e3e3; - O fundo já é definido em .minha-navbar */
+    /* Removido: position, top, left, width, z-index - Já definidos pela classe 'fixed-top' do Bootstrap */
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+    /* Removido: text-align: center; - Desnecessário, pois o Bootstrap alinha o conteúdo */
+}
+
+/* Container da navbar (a cor de fundo da sua navbar fixa) */
+.minha-navbar {
+    background-color: #947646; /* Cor de fundo principal */
+    /* Removido: display: flex, align-items, justify-content, padding, gap - Bootstrap já gerencia isso */
+}
+
+
+/* LOGO */
+.logo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+
+/* MENU DE NAVEGAÇÃO */
+
+/* Ítens de menu: Espaçamento entre os links */
+.navbar-nav .nav-item {
+    margin: 0 20px; /* Reduzi ligeiramente, 20px em cada lado */
+}
+
+/* Links: Cor e estilo */
+.navbar-nav .nav-link {
+    color: #e6e6e6; /* Cor do link */
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    /* Removido: text-align: center; - O centralizador do Bootstrap já funciona bem */
+}
+
+/* Efeito Hover do Link */
+.navbar-nav .nav-link:hover {
+    color: rgb(87, 45, 10);
+}
+
+/* ÍCONES SOCIAIS (Instagram) */
+
+/* Ícone do Instagram no canto direito */
+.social-icons {
+    /* 'ms-auto' do Bootstrap já empurra para a direita, mas se precisar de mais ajustes: */
+    /* margin-left: auto; */
+    display: flex; /* Garante que o ícone é tratado corretamente */
+    align-items: center;
+}
+
+.social-icons i {
+    font-size: 1.8rem;
+    color: #fff;
+    transition: 0.3s;
+    padding-left: 10px; /* Adiciona um pequeno espaço à esquerda do ícone, se necessário */
+}
+
+.social-icons i:hover {
+    color: rgb(87, 45, 10);
+    transform: scale(1.1);
+}
+
+/* Limita a altura das imagens do carrossel */
+.carousel-image {
+    max-height: 600px; /* Altere esse valor para a altura que você quer */
+    object-fit: cover; /* Isso garante que a imagem preencha a altura sem esticar, cortando as bordas se necessário */
+}
+
+/* Garante que o contêiner do carrossel também se ajuste (opcional, mas recomendado) */
+#carouselExampleFade {
+    max-height: 600px; /* Deve ser igual ou maior que o max-height da imagem */
+    overflow: hidden;
+}
+/* BOTÃO FLUTUANTE DO WHATSAPP */
+
+/* Para dar um visual de "card" para Missão, Visão e Valores */
+.content-box {
+    background-color: #ffffff; /* Fundo branco (igual ao container, mas para o card) */
+    border: 1px solid rgba(148, 118, 70, 0.3); /* Borda sutil na cor da sua navbar */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Garante que ocupe a largura total da coluna */
+}
+
+/* Garante que o texto de Valores fique justificado à esquerda, apesar do "text-center" na coluna */
+.text-box-left h3 {
+    text-align: justify !important; /* Mantém a justificativa original */
+}
+.container
+{
+  max-width: auto;
+  max-height: auto;
+}
+
+
+h2
+{
+  text-align: center;
+  font-size: 25px;
+  color: rgb(54, 31, 13);
+}
+
+h3
+{
+  text-align: justify;
+  font-size: 15px;
+  color:  rgb(82, 58, 28);
+}
+
+.contato
+{
+  color: #947646;
+  text-align: center;
+}
+
+.btn{
+  color: #e6e6e6;
+  background-color: #947646;
+}
+.whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #f3f7f4; 
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+
+.table {
+    /* Remove o padding padrão que o Bootstrap pode aplicar e garante o uso da largura total */
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+}
+
+.portifolio {
+    /* Garante que a tabela ocupe 100% da largura da sua seção pai */
+    width: 100%; 
+    max-width: 1200px;
+    /* Ajustes visuais */
+    border-spacing: 0; /* Remove o espaçamento entre células para que o fundo seja contínuo */
+    border-collapse: collapse; 
+    background-color: transparent; /* Remove o fundo da tabela inteira, vamos colocar nas células */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilo para as células da tabela (onde queremos o fundo) */
+.portifolio thead th {
+    /* Define o fundo e a borda para cada coluna/cabeçalho */
+    background-color: #ac946e; /* Fundo que você usou na tabela antes */
+    padding: 10px 10px; /* Adiciona padding para aumentar a altura */
+    transition: background-color 0.3s;
+}
+
+/* Efeito Hover nas células */
+.portifolio thead th:hover {
+    background-color: #7d633b; /* Cor ligeiramente mais escura no hover */
+}
+
+/* Estilo para os links dentro das células (para cor do texto) */
+.portifolio_table a{
+    /* Cor do texto do link */
+    color: #e6e6e6; /* Sugestão: Use uma cor clara para contrastar com o fundo #947646 */
+    text-decoration: none; /* Remove sublinhado do link */
+    display: block; /* Opcional: Garante que o link ocupe toda a célula para o clique */
+    font-weight: bold;
+}
+
+/* Ajuste na seção main/table para altura máxima */
+main {
+    /* Usa Flexbox na main para gerenciar a altura restante */
+    display: flex;
+    flex-direction: column;
+    /* Calcula a altura visível (viewport height) menos a altura do header e do footer */
+    min-height: calc(100vh - 90px - 77.2px); /* 100vh - padding-top do body (90px) - altura aproximada do footer (aprox. 77.2px) */
+}
+
+.table {
+    /* Garante que a seção da tabela não cresça, permitindo que o conteúdo abaixo dela use o espaço */
+    flex-shrink: 0; 
+}
+
+
+
+
+
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #f5f5f5; /* Tom mais escuro no hover */
+}
+
+.whatsapp-icon {
+    width: 38px; /* Aumentei um pouco o ícone */
+    height: 38px;
+    /* Removi background-color: white; do float, pois o ícone é a imagem e não precisa de fundo */
+}
+
+.rodape
+{
+  max-height: auto;
+  color: #fff;
+  background-color: #947646;
+}
