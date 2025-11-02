@@ -271,7 +271,7 @@ main {
     justify-content: center;
    
 }
-.content-box-portfolio
+.content-box-portifolio
 {
     background-color: #ffffff; /* Fundo branco (igual ao container, mas para o card) */
     border: 1px solid rgba(148, 118, 70, 0.3); /* Borda sutil na cor da sua navbar */
@@ -287,3 +287,4 @@ main {
   background-color: #947646;
 
 }
+
